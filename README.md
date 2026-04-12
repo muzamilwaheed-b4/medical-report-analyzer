@@ -1,25 +1,25 @@
-# 🏥 Medical Report Analyzer
+# Medical Report Analyzer
 
 An AI-powered web application that analyzes medical reports and answers questions in plain English using RAG (Retrieval Augmented Generation).
 
-## 🚀 Demo
-Upload any medical PDF → Ask questions → Get instant AI-powered answers!
+## Overview
+Upload any medical PDF report, ask a question, and get an instant AI-powered answer in simple language.
 
-## 🛠️ Tech Stack
-- **Frontend:** React.js
-- **Backend:** FastAPI (Python)
-- **AI Model:** Groq LLaMA 3.3 70B
-- **RAG Pipeline:** TF-IDF + Cosine Similarity
-- **PDF Processing:** PyMuPDF
+## Tech Stack
+- Frontend: React.js
+- Backend: FastAPI (Python)
+- AI Model: Groq LLaMA 3.3 70B
+- RAG Pipeline: TF-IDF with Cosine Similarity
+- PDF Processing: PyMuPDF
 
-## ⚙️ How It Works
+## How It Works
 1. User uploads a medical PDF report
 2. Backend extracts text using PyMuPDF
-3. Text is split into chunks
-4. TF-IDF finds most relevant chunks (RAG)
-5. Groq LLaMA generates a simple answer
+3. Text is split into chunks using LangChain
+4. TF-IDF retrieves the most relevant chunks
+5. Groq LLaMA generates a simple English answer
 
-## 🏃 How To Run
+## How To Run
 
 ### Backend
 ```bash
@@ -35,14 +35,14 @@ npm install
 npm start
 ```
 
-## 📁 Project Structure
+## Project Structure
 ```
 medical-report-analyzer/
-├── backend/          # FastAPI backend
-│   └── main.py      # API endpoints + RAG pipeline
-├── frontend/         # React frontend
+├── backend/
+│   └── main.py
+├── frontend/
 │   └── src/
-│       └── App.js   # Main UI component
-├── app.py           # Streamlit prototype
+│       └── App.js
+├── app.py
 └── requirements.txt
 ```
